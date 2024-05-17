@@ -1,0 +1,1 @@
+This engine is a personal project where I am hoping to develop a customised physics engine. I had recived inspiration from a few youtube videos that gave me the idea that this could be a great learning opportunity. Alongside my coding journey, I will be referencing Ian Millington's "Game Physics Engine Development".
