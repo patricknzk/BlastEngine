@@ -1,9 +1,11 @@
-#include "assert.h"
-#include "particle.h"
+#include <cassert>
+#include <particle.h>
 
 using namespace blast;
 
 void Particle::integrate(real duration) {
+
+    // Make sure duration is above zero.
     assert(duration > 0.0);
 
     // Update position

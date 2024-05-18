@@ -16,6 +16,9 @@ namespace blast{
 
         Vector3 acceleration;
 
+        // Holds the force 
+        Vector3 forceAccum;
+
     // Add damping to prevent numerical errors creating weird physics.
     real damping;
 
