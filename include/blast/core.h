@@ -72,7 +72,67 @@ namespace blast{
     Vector3 operator*(const real value) const {
         return Vector3(x*value, y*value, z*value);
     }
-    //page 49 continue
+    
+    // Adds vectors together
+    void operator+=(const Vector3& v) {
+        x+=v.x;
+        y+=v.y;
+        z+=v.z;
+    }
+
+    // Returns a copy of the added vector
+    Vector3 operator+(const Vector3& v) const {
+        return Vector3(x+v.x, y+v.y, z+v.z);
+    }
+
+    // Subtracts vectors
+    void operator-=(const Vector3& v) {
+        x-=v.x;
+        y-=v.y;
+        z-=v.z;
+    }
+
+    // Returns a copy of the added vector
+    Vector3 operator-(const Vector3& v) const {
+        return Vector3(x-v.x, y-v.y, z-v.z);
+    }
+
+    // Add scaled vectors
+    void addScaledVector(const Vector3& vector, real scale) {
+        x += vector.x*scale;
+        y += vector.y*scale;
+        z += vector.z*scale;
+    }
+
+    // Vector multiplication (component wise)
+    Vector3 componentProduct(const Vector3& vector) const {
+        return Vector3(x * vector.x, y * vector.y, z * vector.z);
+    }
+
+    void componentProductUpdate(const Vector3& vector) {
+        x *= vector.x;
+        y *= vector.y;
+        z *= vector.z;
+    }
+
+    // Dot product (two versions of the same thing)
+    real scalarProduct(const Vector3& vector) const {
+        return x*vector.x + y*vector.y + z*vector.z;
+    }
+
+    real operator *(const Vector3& vector) const {
+        return x*vector.x + y*vector.y + z*vector.z;
+    }
+
+    // Cross product (multiply two vectors)
+    Vector3 vectorProduct(const Vector3& vector) const {
+        return Vector3(y*vector.z-z*vector.y, z*vector.x - x*vector.z, x*vector.y - y*vector.x);
+    }
+
+    void operator %=(const Vector3& vector) {
+        *this = vectorProduct(vector);
+    }
+    
     };
 }
 

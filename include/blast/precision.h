@@ -14,6 +14,8 @@ namespace blast {
     // rename sqrtf to real_sqrt.
     #define real_sqrt sqrtf
 
+    // rename powf to real_pow.
+    #define real_pow powf
 }
 
 #endif // BLAST_PRECISION_H
