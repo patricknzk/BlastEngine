@@ -2,6 +2,10 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <particle.h>
+#include <fstream>
+#include <sstream>
+#include <string>
+
 
 // Callback function to adjust viewport size when the window is resized
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
@@ -35,6 +39,17 @@ int main() {
     }
     glfwMakeContextCurrent(window);
 
+    float vertice[] = {
+        0.5f, 0.5f, 0.0f,
+        0.5f, 0.5f, 0.0f,
+        0.0f, 0.5f, 0.0f
+    };
+
+    unsigned int VBO;
+    glGenBuffers(1, &VBO);
+
+
+
     // Load OpenGL functions using GLAD
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         std::cerr << "Failed to initialize GLAD" << std::endl;
@@ -51,7 +66,7 @@ int main() {
         processInput(window);
 
         // Render here
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         // Swap front and back buffers
