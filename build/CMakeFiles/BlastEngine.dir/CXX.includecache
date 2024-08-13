@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/blast/core.h
-precision.h
-../include/blast/precision.h
-
-../include/blast/particle.h
-core.h
-../include/blast/core.h
-precision.h
-../include/blast/precision.h
-
-../include/blast/precision.h
-cmath
--
-
 ../libs/GLAD/include/KHR/khrplatform.h
 stdint.h
 -
@@ -84,7 +70,5 @@ glad/glad.h
 GLFW/glfw3.h
 -
 iostream
--
-particle.h
 -
 
